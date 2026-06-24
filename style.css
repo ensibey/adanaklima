@@ -1041,19 +1041,23 @@ ul {
     
     .hero-stats {
         justify-content: center;
+        gap: 20px;
     }
     
     .calculator-box {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 24px;
     }
     
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .contact-wrapper {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .footer-content {
@@ -1065,20 +1069,37 @@ ul {
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
+        z-index: 1001;
+    }
+    
+    /* Animated Hamburger Menu cross transition */
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
     
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 75px;
+        top: 0;
+        height: 100vh;
         gap: 0;
         flex-direction: column;
+        justify-content: center;
         background-color: var(--bg-secondary);
         width: 100%;
         text-align: center;
         box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-        transition: 0.3s;
-        border-bottom: 1px solid var(--border-color);
+        transition: left 0.4s cubic-bezier(0.1, 0.76, 0.55, 0.94);
+        border-bottom: none;
+        z-index: 1000;
     }
     
     .nav-menu.active {
@@ -1086,7 +1107,7 @@ ul {
     }
     
     .nav-menu li {
-        padding: 20px 0;
+        padding: 15px 0;
     }
     
     .btn-nav-wa {
@@ -1094,9 +1115,76 @@ ul {
     }
     
     .hero-text h1 {
-        font-size: 34px;
+        font-size: 32px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 15px 20px 20px 20px;
     }
 }
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text p {
+        font-size: 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 24px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .filter-tabs {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .filter-capacity {
+        width: 100%;
+    }
+
+    .filter-capacity select {
+        width: 100%;
+    }
+}
+
 
 /* FAQ Accordion Styling */
 .faq-accordion {
