@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let btuClass = '';
 
         if (btuNeeded <= 9000) {
-            btuClass = '12000'; // Standardize to closest available capacity (Midea/Viessmann starts from 12k in our catalog)
+            btuClass = '12000'; // Standardize to closest available capacity
             recommendationText = 'Odanız için 9.000 BTU yeterli olsa da daha hızlı iklimlendirme ve yüksek verimlilik için 12.000 BTU modelimizi öneririz.';
             calculatedCapacityClass = '12000';
         } else if (btuNeeded <= 12000) {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Direct WhatsApp Product Order Integration
-    const phoneNo = "905000000000"; // Target WhatsApp Number
+    const phoneNo = "905457990356"; // Updated Target WhatsApp Number
 
     document.querySelectorAll('.btn-wa-order').forEach(btn => {
         btn.addEventListener('click', (e) => {
