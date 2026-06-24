@@ -178,6 +178,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const textMessage = `Merhaba, ben *${name}* (${phone}).\n\n*Talep/Hizmet Türü:* ${service}\n*Mesajım:* ${message}`;
         const waUrl = `https://wa.me/${phoneNo}?text=${encodeURIComponent(textMessage)}`;
         
-        window.open(waUrl, '_blank');
+    });
+
+    // FAQ Accordion Toggle
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            
+            // Toggle active class on item
+            item.classList.toggle('active');
+            
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0px';
+            }
+        });
     });
 });
