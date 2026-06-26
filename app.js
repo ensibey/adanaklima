@@ -152,17 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneNo = "905457990356"; // Updated Target WhatsApp Number
 
     document.querySelectorAll('.btn-wa-order').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const brand = btn.getAttribute('data-brand');
-            const model = btn.getAttribute('data-model');
-            const btu = btn.getAttribute('data-btu');
-            const price = btn.getAttribute('data-price');
+        const brand = btn.getAttribute('data-brand');
+        const model = btn.getAttribute('data-model');
+        const btu = btn.getAttribute('data-btu');
+        const price = btn.getAttribute('data-price');
 
-            const textMessage = `Merhaba, ${brand} ${model} ${btu} BTU klimayı KDV ve montaj dahil ${price} TL fiyatıyla sipariş etmek istiyorum. Stok durumu ve teslimat süresi hakkında bilgi alabilir miyim?`;
-            const waUrl = `https://wa.me/${phoneNo}?text=${encodeURIComponent(textMessage)}`;
-            window.open(waUrl, '_blank');
-        });
+        const textMessage = `Merhaba, ${brand} ${model} ${btu} BTU klimayı KDV ve montaj dahil ${price} TL fiyatıyla sipariş etmek istiyorum. Stok durumu ve teslimat süresi hakkında bilgi alabilir miyim?`;
+        const waUrl = `https://wa.me/${phoneNo}?text=${encodeURIComponent(textMessage)}`;
+        
+        btn.setAttribute('href', waUrl);
+        btn.setAttribute('target', '_blank');
+        btn.setAttribute('rel', 'noopener');
     });
 
     // WhatsApp Contact Form Action
