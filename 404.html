@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Bulunamadı | Aziz Mühendislik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--bg-primary);
+        }
+        .error-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+        .error-code {
+            font-size: 150px;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -5px;
+        }
+        .error-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .error-desc {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .error-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 100px;
+            }
+            .error-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="error-section">
+            <div class="hero-bg-gradients">
+                <div class="gradient-sphere sphere-1"></div>
+                <div class="gradient-sphere sphere-2"></div>
+            </div>
+            <div class="error-content">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Aradığınız Sayfa Bulunamadı</h1>
+                <p class="error-desc">Ulaşmaya çalıştığınız sayfa silinmiş, ismi değiştirilmiş veya geçici olarak kullanım dışı olabilir. Aşağıdaki butonları kullanarak ana sayfaya dönebilir veya bizimle iletişime geçebilirsiniz.</p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Ana Sayfaya Dön</a>
+                    <a href="https://wa.me/905457990356" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> Destek Alın</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
