@@ -1247,3 +1247,13 @@ ul {
     padding: 20px 30px 30px 30px;
     border-top: 1px solid var(--border-color);
 }
+
+.faq-question h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: inherit;
+    margin: 0;
+    font-family: inherit;
+    display: inline;
+}
+
